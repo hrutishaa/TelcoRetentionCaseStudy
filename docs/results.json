@@ -1,12 +1,12 @@
 {
-  "customers": 7043,
-  "churned": 1869,
-  "churn_pct": 26.5,
-  "lost_mrr": 139131,
-  "target_segment_churners": 1024,
-  "target_share_of_churners_pct": 54.8,
-  "target_lost_mrr": 68301,
-  "save_rate_assumption": 0.15,
-  "saved_mrr": 10245,
-  "saved_arr": 122943
+  "customers" : 7043,
+  "churned" : 1869,
+  "churn_pct" : 26.5,
+  "lost_mrr" : 139131,
+  "target_segment_churners" : 1024,
+  "target_share_of_churners_pct" : 54.8,
+  "target_lost_mrr" : 68301,
+  "save_rate_assumption" : 0.15,
+  "saved_mrr" : 10245,
+  "saved_arr" : 122943
 }

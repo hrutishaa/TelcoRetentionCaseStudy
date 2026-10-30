@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: "3.12"}
-      - run: pip install pytest
-      - run: python scripts/size_opportunity.py
-      - run: python -m pytest -q
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: "17", cache: maven}
+      - run: mvn -B test
+      - run: mvn -B -q exec:java

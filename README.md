@@ -14,7 +14,7 @@ https://github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Cust
 | [docs/process-maps.md](docs/process-maps.md) | As-is and to-be retention process (Mermaid) |
 | [docs/gap-analysis.md](docs/gap-analysis.md) | Gap analysis between the two |
 | [sql/sizing.sql](sql/sizing.sql) | Queries used to find and size the problem |
-| [scripts/size_opportunity.py](scripts/size_opportunity.py) | Loads the CSV into SQLite, runs the queries, writes `docs/results.json` |
+| [SizeOpportunity.java](src/main/java/casestudy/SizeOpportunity.java) | Loads the CSV into SQLite over JDBC, runs the queries, writes `docs/results.json` |
 
 ## Key findings
 
@@ -28,9 +28,9 @@ https://github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Cust
 
 ## Run it
 
-```bash
-python scripts/size_opportunity.py   # prints every query result
-python -m pytest -q
-```
+Built with Java 17 and Maven (Apache Commons CSV, SQLite JDBC, Jackson, JUnit 5).
 
-No dependencies beyond the Python standard library (plus pytest for tests).
+```bash
+mvn test            # runs the tests
+mvn -q exec:java    # prints every query result and writes docs/results.json
+```
